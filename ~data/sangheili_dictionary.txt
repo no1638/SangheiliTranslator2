@@ -1,27 +1,27 @@
 Demon; ghashank'o
 I; Jahn
 Quantum; Krakjim
-Rest; Musuyano
-Scent; Heenu
+Rest; Musuya
+Scent; Henu
 Vector; Tahshi
 about; ooyam
 around; zus
 appreciate; mosone
 alliance; Shandi
 ancient; tkhuyujo
-adult; kon
+adult; kon'akji
 also; nizhi
 active; ruut’iyaji
 advisor; quisk'thiu
-again; e'wu
+again; e'jaga
 alive; monera
 attack; ruuk'ina
 all; chkhan
 am; ek
 as; ma
-are; aek
+are; a'ek
 and; e
-or; ei
+or; ei'm
 anyone; e'kah
 any; e'kij
 anything; ts’uuchahe
@@ -33,12 +33,11 @@ as; ri'-
 at; oni'k
 away; ga
 big; He'jik
-back; kritz
+back; warut'eya
 both; k'ung
 be; deuna
-because; ghaa'p'zhi
+because; ghaazhi
 bring; khech'imo
-bee; zzi
 bend; opkho
 benefit; khaayagha
 best; huq
@@ -47,7 +46,7 @@ book; p'asnga
 bone; t'ulu
 brave; dzima
 battled; dzuk'uuchi
-blessed one; Hirajo
+blessed-one; Hirajo
 blood; luuka
 breasts; kie'sh
 bring; Kooay
@@ -65,7 +64,7 @@ change; Wolos
 continue; q'awarut'o
 channel; shhka
 chat; t'ikhawa
-check; wuok
+check; wo'k
 child; kayo
 call; t’isiizit
 calling; t’isiizit’a
@@ -74,18 +73,16 @@ chocolate; mmna
 claim; juukhawa
 clan-leader; Kaidon
 clan; Kai
-colony; hesduros
-house; hesdur
 come; jaya
 ceremony; baashi
 cum; klaka
 comrade; Endiyoko
 loyal; endi'ra
-core; jmma
+core; j'kha
 correct; Kkhagadza
 council; juuch'inji
 covenant; Chkhan
-creature; p'ikhe
+creature; bekkhajo
 dad; juu'noh
 dead; hoh'ji
 deadly; keo'jaga
@@ -255,7 +252,7 @@ oh; qkhe
 onto; on'oni
 ours; Momemu
 our; momem
-out; roota
+out; ruut'a
 or; gah'i
 other; k'unjo
 online; o'kaj
@@ -314,7 +311,7 @@ say; khawa
 saying; khawajo
 see; ch'anik'o
 shadow; eya'kelni
-so; ghaa'q'zhi
+so; ghaazhi
 seek; om'namom
 sex; heika
 ship; wele
@@ -330,7 +327,7 @@ stronger; haali
 seen; ch'anik'oji
 soon; yodu
 slower; ti'regati
-show; ch’anik’o
+show; ch’anik’otanjahe
 slow; ti'regat
 smell; Heenu
 soul; Jineh
@@ -395,7 +392,7 @@ way; al'e
 we; riin
 weapon; zhuro
 what; khawajo
-when; ghaa'd'zhi
+when; ghaazhi
 where; ghaadi
 was; diibeji
 were; diibe
@@ -414,10 +411,10 @@ woman; bojo
 why; jahi'q
 worthy; kkhaaya
 wise; khoya
-yes; ts'um
-yeah; ts'uuchaga
-your; k'ek
-you're; k'eki
+yes; ts'uuchaga
+yeah; ts'um
+your; k'e
+you're; k'e
 you; k'e
 yoke; io
 zealot; moq'aajo
@@ -440,7 +437,7 @@ brain; mos
 jaw (lower); ga'i
 jaw (upper); juu'n
 foot; gha'y
-hand; kh'e / akke
+hand; akke
 anus; koonay
 vagina; jaanay
 penis; eenay
