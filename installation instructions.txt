@@ -1,0 +1,26 @@
+To install / setup this translator, please follow these directions
+
+Run setup_windows.bat
+
+In the window that comes up, please enter:
+
+pip install -r requirements.txt
+
+then press enter.
+After the command has finished running go ahead and start the program by clicking on the path bar in file explorer (little bar at the top that will say the current directory ie (id est):
+
+Desktop > python > sangheili translator
+
+in this bar click on blank space, the text should be highlighted blue, then proceed to type "cmd" (without quotes) and press enter, another black window should come up, if you have installed python correctly you should be able to type main.py and press enter!
+
+If you have the "pip is not recognized" error, please ensure you have python installed, if you have installed python then re-run the installation and ensure you check the 
+
+[] Add python to path
+
+option on the first page of the installer, then click install.
+
+(YOU MAY HAVE TO RESTART FOR IT TO TAKE EFFECT!)
+
+if you do not have python installed please go to the python.org website and download the latest release and follow the instructions given above for adding python to path. OR use the included python installer
+
+You will also need Git installed to run the updater for any dictionary / main program updates to be installed correctly!

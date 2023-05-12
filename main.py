@@ -169,15 +169,27 @@ def main():
             translated.append(output[-1])
         if output is None:
             c.execute(f"""SELECT * FROM words WHERE counter LIKE "{word}" """)
-            output = c.fetchone()
-            if not output is None:
-                translated.append(output[0])
-            if output is None:
+            output = c.fetchall()
+            if not len(output) == 0:
+                #print(output)
+                if len(output) > 1:
+                    newlist = []
+                    for item in output:
+                      newlist.append(f"{item[-2]}")
+                      #output.remove(item)
+                      #print(newlist)
+                    newjoined = "/".join(newlist)
+                    #print(newjoined)
+                    translated.append(newjoined)
+                if not len(output) > 1:
+                  output1 = output[0]
+                  translated.append(output1[-2])
+            if len(output) == 0:
                 s = f"{word}"
-                indices = [-3]
+                indices = [-4]
                 parts = [s[i:j] for i,j in zip(indices, indices[1:]+[None])]
                 suffix = parts[0]
-                base = word[:-3]
+                base = word[:-4]
                 c.execute(f"""SELECT * FROM suffix WHERE counter LIKE "{suffix}" """)
                 output2 = c.fetchone()
                 if not output2 is None:
@@ -191,16 +203,19 @@ def main():
                     output2 = c.fetchone()
                     if not output2 is None:
                         indbase = splitted.index(word)
-                        base = splitted[indbase+1]
-                        c.execute(f"""SELECT * FROM words WHERE word LIKE "{base}" """)
-                        output3 = c.fetchone()
-                        if not output3 is None:
-                            translated.append(f"{output3[-1]}{output2[-1]}")
-                            splitted.remove(f"{base}")
-                            # print(translated)
-                            # print(output3)
-                            # print(output2)
-                
+                        try:
+                            base = splitted[indbase+1]
+                            c.execute(f"""SELECT * FROM words WHERE word LIKE "{base}" """)
+                            output3 = c.fetchone()
+                            if not output3 is None:
+                                translated.append(f"{output3[-1]}{output2[-1]}")
+                                splitted.remove(f"{base}")
+                                # print(translated)
+                                # print(output3)
+                                # print(output2)
+                        except:
+                            #print(base)
+                            translated.append(output2[-1])
                 if output2 is None:
                     translated.append(f"{r}[{word}]{g}")
       joined = " ".join(translated)
