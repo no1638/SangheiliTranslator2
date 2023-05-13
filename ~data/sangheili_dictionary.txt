@@ -52,6 +52,7 @@ breasts; kie'sh
 bring; Kooay
 brother; khuut'a
 born; br'aq
+burger; pun'chi
 burn; Ruq
 but; q'a
 by; ni'a
@@ -104,7 +105,7 @@ dust; ku'ka
 drum; ho'karn
 drums; ho'karni
 did; qwo'ji
-eat; Vochu
+eat; khutkho
 enemy; qkhan'ik
 education; E'raku
 eye; ik'o
@@ -137,8 +138,8 @@ followed; Umasa
 follower; Umasi
 fight; k'utkho
 female; dzana
-foods; Vochua
-food; Vochui
+foods; khut'ka
+food; khut'ka
 for; ghaazhi
 force; wu'nah
 gift; waaka
@@ -153,7 +154,7 @@ good; Kiyee
 give; Jag'im
 guardian; Leevrukah
 guess; gaikhawa
-honor; ga'qi
+hfr; ga'qi
 help; g'ahk
 hair; skragz
 hand; heiro
@@ -208,7 +209,7 @@ luminary; k'iisho
 like; k’unjo
 long; fen'ch
 loyalty; shaadat'u
-looking; ch'anu'isha
+looking; ch'ani'ko
 make; Rehi
 made; Rehi
 master; guulo
@@ -260,6 +261,7 @@ play; runa'hi
 partner; la'ajo
 prayer; dahtechee
 prepare; Ruie
+pleasant; ngit'a
 presence; banghaina
 programming; didi
 progress; Runahudo
@@ -396,7 +398,7 @@ when; ghaazhi
 where; ghaadi
 was; diibeji
 were; diibe
-will; otajaga
+will; ono
 wing; 'asabu
 with; dar
 within; me
@@ -445,3 +447,11 @@ leg; koojah
 legs; koojah'i
 thigh; koojah
 thighs; koojah'i
+could; p'tskha
+some; kkhjarkum
+small; khjar
+these; kh'ine
+use; ka'tskha
+get; khech'kha
+give; khe'qkha
+look; ch'ani'kotan
