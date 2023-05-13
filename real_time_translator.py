@@ -25,11 +25,31 @@ current = set()
 def translate(phrase):
   translated = []
   splitted = phrase.split()
+  punc = "?,.;!@#$%^()-=_+~"
+  foundpunc = False
+  puncindex = 0
+  wordindex = 0
+  symbol = None
   for word in splitted:
+    for char in word:
+        if char in punc:
+            #print('character in punctuation list')
+            wordindex = splitted.index(word)
+            puncindex = word.index(char)
+            if word[puncindex] == word[-1]:
+                foundpunc = True
+            symbol = char
+            word = word.replace(char, "")
+            print(symbol)
     c.execute(f"""SELECT * FROM words WHERE word LIKE "{word}" """)
     output = c.fetchone()
     if not output is None:
         translated.append(output[-1])
+        if foundpunc == True:
+            newword = translated[wordindex]
+            splitword = newword + symbol
+            translated[wordindex] = splitword
+            foundpunc = False
     if output is None:
         c.execute(f"""SELECT * FROM words WHERE counter LIKE "{word}" """)
         output = c.fetchall()
@@ -44,9 +64,17 @@ def translate(phrase):
                 newjoined = "/".join(newlist)
                 #print(newjoined)
                 translated.append(newjoined)
+                # if foundpunc == True:
+                    # newword = translated[wordindex]
+                    # splitword = newword + symbol
+                    # translated[wordindex] = newword
             if not len(output) > 1:
               output1 = output[0]
               translated.append(output1[-2])
+              # if foundpunc == True:
+                # newword = translated[wordindex]
+                # splitword = newword + symbol
+                # translated[wordindex] = newword
         if len(output) == 0:
             s = f"{word}"
             indices = [-4]
@@ -60,6 +88,11 @@ def translate(phrase):
                 output3 = c.fetchone()
                 if not output3 is None:
                     translated.append(f"{output2[0]} {output3[0]}")
+                    if foundpunc == True:
+                        newword = translated[wordindex]
+                        splitword = newword + symbol
+                        translated[wordindex] = newword
+                        foundpunc = False
                     #print(translated)
             if output2 is None:
                 c.execute(f"""SELECT * FROM suffix WHERE word LIKE "{word}" """)
@@ -73,12 +106,23 @@ def translate(phrase):
                         if not output3 is None:
                             translated.append(f"{output3[-1]}{output2[-1]}")
                             splitted.remove(f"{base}")
+                            if foundpunc == True:
+                                newword = translated[wordindex]
+                                splitword = newword + symbol
+                                translated[wordindex] = newword
+                                foundpunc = False
                             # print(translated)
                             # print(output3)
                             # print(output2)
                     except:
                         #print(base)
                         translated.append(output2[-1])
+                        if foundpunc == True:
+                            newword = translated[wordindex]
+                            splitword = newword + symbol
+                            print("tried to set word puncutation")
+                            translated[wordindex] = newword
+                            foundpunc = False
             if output2 is None:
                 translated.append(f"[{word}]")
   joined = " ".join(translated)
