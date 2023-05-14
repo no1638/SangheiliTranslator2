@@ -3,15 +3,24 @@ from pynput import keyboard
 import keyboard as kboard
 import sqlite3
 import string
-import win32clipboard
 import pyautogui
+from os import name as os_name, system
 import pyperclip
+import os
+import random
+from colorama import init, Fore as cc
 
 
 
-
-conn = sqlite3.connect("~data/words.db", check_same_thread=False)
-c = conn.cursor()
+clear = lambda: system('cls') if os_name == 'nt' else system('clear')
+init()
+dr = DR = r = R = cc.LIGHTRED_EX
+g = G = cc.LIGHTGREEN_EX
+b = B = cc.LIGHTBLUE_EX
+m = M = cc.LIGHTMAGENTA_EX
+c = C = cc.LIGHTCYAN_EX
+y = Y = cc.LIGHTYELLOW_EX
+w = W = cc.RESET
 
 
 kb = Controller()
@@ -20,9 +29,89 @@ enabled = False
 keylist = []
 
 cmb = [{keyboard.Key.home}]
+cmb2 = [{keyboard.Key.f9}]
+
+
 current = set()
+def refresh():
+    conn = sqlite3.connect("~data/words.db", check_same_thread=False)
+    c = conn.cursor()
+    choices = [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+    cho = random.choice(choices)
+    if cho == 0:
+      print(f"{r}Deleting current SQL rows...")
+      c.execute("DELETE FROM words")
+      print(f"{g}\nSuccess!\n{w}")
+      print(f"{y}Loading new words...")
+    if cho == 1:
+      print(f"{r}Hacking into the mainframe...")
+      c.execute("DELETE FROM words")
+      print(f"{g}\nSuccess!\n{w}")
+      print(f"{y}Loading new configs...")
+    with open("~data/sangheili_dictionary.txt", "r", encoding="utf-8") as f:
+      content = f.readlines()
+      f.close()
+    colors = [f"{r}", f"{g}", f"{b}", f"{m}", f"{c}", f"{y}", f"{w}"]
+    currentcolor = 0
+    for line in content:
+
+      line = line.strip()
+      print(f"{colors[currentcolor]}{line}")
+      try:
+        ind = line.index(";")
+      except:
+        print(line)
+      mainword = line[:ind]
+      translated = line[ind + 2:]
+      c.execute(f"""INSERT INTO words VALUES ("{mainword}", "{translated}")""")
+      conn.commit()
+      currentcolor = currentcolor + 1
+      if currentcolor >= 6:
+        currentcolor = 0
+    c.execute("DELETE FROM suffix")
+    print("Deleted all Suffixes")
+
+    with open("~data/suffix.txt", "r", encoding="utf-8") as f:
+      content = f.readlines()
+      f.close()
+    colors = [f"{r}", f"{g}", f"{b}", f"{m}", f"{c}", f"{y}", f"{w}"]
+    currentcolor = 0
+    for line in content:
+
+      line = line.strip()
+      print(f"{colors[currentcolor]}{line}")
+      try:
+        ind = line.index(";")
+      except:
+        print(line)
+      mainword = line[:ind]
+      translated = line[ind + 2:]
+      c.execute(f"""INSERT INTO suffix VALUES ("{mainword}", "{translated}")""")
+      conn.commit()
+      currentcolor = currentcolor + 1
+      if currentcolor >= 6:
+        currentcolor = 0
+        
+        
+    print(f"\n{g}Success!\n{w}")
+    conn.close()
 
 def translate(phrase):
+  conn = sqlite3.connect("~data/words.db", check_same_thread=False)
+  c = conn.cursor()
   translated = []
   splitted = phrase.split()
   punc = "?,.;!@#$%^()-=_+~"
@@ -127,6 +216,7 @@ def translate(phrase):
                 translated.append(f"[{word}]")
   joined = " ".join(translated)
   print(f"{joined}")
+  conn.close()
   return joined
         
         
@@ -135,12 +225,24 @@ def execute():
     pyautogui.hotkey('ctrl', 'a')
     pyautogui.hotkey('ctrl', 'c')  # ctrl-c to copy
     data = pyperclip.paste()
-    #print(data)
-    phrase = data
-    phrase2 = translate(phrase)
-    pyperclip.copy(phrase2)
-    pyautogui.hotkey('ctrl', 'v')
+    if not "~~refresh~~" in data:
+        phrase = data
+        phrase2 = translate(phrase)
+        pyperclip.copy(phrase2)
+        pyautogui.hotkey('ctrl', 'v')
+    if "~~refresh~~" in data:
+        refresh()
     
+def execute2():
+    pyautogui.hotkey('ctrl', 'c')  # ctrl-c to copy
+    data = pyperclip.paste()
+    if not "~~refresh~~" in data:
+        phrase = data
+        phrase2 = translate(phrase)
+        pyperclip.copy(phrase2)
+        pyautogui.hotkey('ctrl', 'v')
+    if "~~refresh~~" in data:
+        refresh()
 
 
 
@@ -196,16 +298,27 @@ def on_press(key):
     current.add(key)
     if any(all(k in current for k in z) for z in cmb):
       execute()
+  if any([key in z for z in cmb2]):
+    current.add(key)
+    if any(all(k in current for k in z) for z in cmb2):
+      execute2()
  
 def on_release(key):
-  print(current)
   if any([key in z for z in cmb]):
     try:
         current.remove(key)
     except:
         pass
     print(current)
+  if any([key in z for z in cmb2]):
+    try:
+        current.remove(key)
+    except:
+        pass
+    print(current)
         
+refresh()
+
 with Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
     

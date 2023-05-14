@@ -198,10 +198,11 @@ keystone; oq'ogaka
 kill; matkha
 killed; matkhaji
 know; qkhan
-late; tikoxa
+late; yodu'ni
 leave; waqkhi
 leader; don
 let; Y'ah
+later; yodu'ka
 life; Cheenoh
 listen; ch'an'ek
 light; k'iis
@@ -237,7 +238,7 @@ man; boja
 name; tkhaadop'o
 needler; kh'repos
 need; ngani
-near; ogha ni
+near; ogha-ni
 needs; na'eta
 needed; na'eti
 nice; Aindu
@@ -277,7 +278,7 @@ path; Shak'o
 prophet; hira
 quickly; ruujaya
 rock; gakha
-real; raj
+real; raj'khawa
 revenge; maaziit'u
 red; Saban
 repost; snk'rugdi
@@ -309,8 +310,8 @@ search; maaro
 searching; q'amaaro
 sense; banghaina
 sangheili; Sangiyri
-say; khawa
-saying; khawajo
+say; khawani
+saying; khawanitan
 see; ch'anik'o
 shadow; eya'kelni
 so; ghaazhi
@@ -320,6 +321,8 @@ ship; wele
 sick; Blar
 signal; banghainta
 silence; ni'wuo
+save; ga'khawa
+saved; ga'khawaji
 sacrifice; gawaaka
 sister; shiooah
 sleep; pkhungo
@@ -328,7 +331,7 @@ strong; haala
 stronger; haali
 seen; ch'anik'oji
 soon; yodu
-slower; ti'regati
+slower; ooyamaeya
 show; ch’anik’otanjahe
 slow; ti'regat
 smell; Heenu
@@ -379,7 +382,7 @@ understand; ch'aamosik'o
 unstable; kraku
 until; ijk
 unknown; ngaamas
-up; grow
+up; he'jitan
 vagina; Jaanay
 wait; hodu
 waves; mogha
@@ -455,3 +458,6 @@ use; ka'tskha
 get; khech'kha
 give; khe'qkha
 look; ch'ani'kotan
+now; ikhi'ga
+forever; geeoh
+vigilant; neechuh
