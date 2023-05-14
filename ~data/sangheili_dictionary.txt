@@ -96,6 +96,7 @@ device; me'kh
 devices; maikhu
 disgusting; blu'jo
 do; tskha
+did; tskhaji
 does; Aeu
 done; qwor
 dont; masee
@@ -358,11 +359,13 @@ there; tkhaas
 the; oni
 them; tkhaari
 then; tkhazhi
+tell; khawanikhi
 they; jayatan
 they; muuri
 together; riikhe'ni
 think; thium
 this; ine
+o; o
 thought; thiuma
 throw; wa'hu
 time; maasa
