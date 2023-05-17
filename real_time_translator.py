@@ -28,6 +28,10 @@ kb = Controller()
 enabled = False
 keylist = []
 
+
+# HOTKEYS
+# TO CHANGE KEYS TO A LETTER KEY USE keyboard.KeyCode("key")
+
 cmb = [{keyboard.Key.home}]
 cmb2 = [{keyboard.Key.f9}]
 
@@ -135,6 +139,7 @@ def translate(phrase):
     if not output is None:
         translated.append(output[-1])
         if foundpunc == True:
+            print(word)
             newword = translated[wordindex]
             splitword = newword + symbol
             translated[wordindex] = splitword
@@ -321,7 +326,3 @@ refresh()
 
 with Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
-    
-    
-    
-    
