@@ -123,7 +123,9 @@ def translate(phrase):
   puncindex = 0
   wordindex = 0
   symbol = None
-  for word in splitted:
+  
+  for splitindex, word in enumerate(splitted):
+    #splitindex = splitted.index(word)
     for char in word:
         if char in punc:
             #print('character in punctuation list')
@@ -139,10 +141,12 @@ def translate(phrase):
     if not output is None:
         translated.append(output[-1])
         if foundpunc == True:
-            print(word)
-            newword = translated[wordindex]
+            #wordindex1 = splitted.index(word)
+            #print(wordindex1)
+            wordindex = translated[splitindex]
+            newword = translated[splitindex]
             splitword = newword + symbol
-            translated[wordindex] = splitword
+            translated[splitindex] = splitword
             foundpunc = False
     if output is None:
         c.execute(f"""SELECT * FROM words WHERE counter LIKE "{word}" """)
@@ -183,9 +187,12 @@ def translate(phrase):
                 if not output3 is None:
                     translated.append(f"{output2[0]} {output3[0]}")
                     if foundpunc == True:
-                        newword = translated[wordindex]
+                        #wordindex1 = splitted.index(word)
+                        #print(wordindex1)
+                        wordindex = translated[splitindex]
+                        newword = translated[splitindex]
                         splitword = newword + symbol
-                        translated[wordindex] = newword
+                        translated[splitindex] = newword
                         foundpunc = False
                     #print(translated)
             if output2 is None:
@@ -201,9 +208,9 @@ def translate(phrase):
                             translated.append(f"{output3[-1]}{output2[-1]}")
                             splitted.remove(f"{base}")
                             if foundpunc == True:
-                                newword = translated[wordindex]
+                                newword = translated[splitindex]
                                 splitword = newword + symbol
-                                translated[wordindex] = newword
+                                translated[splitindex] = newword
                                 foundpunc = False
                             # print(translated)
                             # print(output3)
@@ -215,7 +222,7 @@ def translate(phrase):
                             newword = translated[wordindex]
                             splitword = newword + symbol
                             print("tried to set word puncutation")
-                            translated[wordindex] = newword
+                            translated[splitindex] = newword
                             foundpunc = False
             if output2 is None:
                 translated.append(f"[{word}]")
