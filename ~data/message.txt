@@ -1,2 +1,2 @@
-SEVERE
-test!
+MODERATE
+test
