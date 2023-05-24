@@ -1,2 +1,2 @@
-MODERATE
+SEVERE
 test
