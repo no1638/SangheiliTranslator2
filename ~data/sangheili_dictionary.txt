@@ -8,6 +8,7 @@ about; ooyam
 around; zus
 above; zu'yujo
 appreciate; mosone
+angry; mos'ga'khi
 alliance; Shandi
 aim; maaro'qa
 ancient; tkhuyujo
@@ -41,6 +42,7 @@ both; k'ung
 be; deuna
 because; ghaazhi
 bring; khech'imo
+been; deuniji
 bend; opkho
 benefit; khaayagha
 best; huq
@@ -133,9 +135,11 @@ explode; krakooma
 faith; qu'sim
 faithful; qu'sima
 fang; amnsir
+friend; kikhuut'a
 faster; ooyama
 father; nejo
 fertilized egg; nenaya
+feel; deuna'mos
 fierce; ragra
 finance; fijung
 finally; Tkhahant’u
@@ -144,8 +148,9 @@ fire; ruq'a
 fix; cangkwa
 found; maarotan
 follow; umas
-followed; Umasa
-follower; Umasi
+following; umas'ine
+followed; umasa
+follower; umasi
 fight; k'utkho
 female; dzana
 foods; khut'ka
@@ -163,7 +168,7 @@ great; oq'o
 glory; oq'otu
 good; Kiyee
 give; Jag'im
-guardian; Leevrukah
+guardian; leevrukah
 guess; gaikhawa
 hfr; ga'qi
 help; g'ahk
@@ -174,12 +179,13 @@ hate; garata
 hated; garat'i
 hatred; garat'i
 have; khebit'a
+had; khebit'aji
 he; noh
 helmet; mwak
 her; mu
 holiness; qkhaat'u
 holy; qkhado
-heresy; hlirghu
+heresy; t'iiwajine
 heretic; t'iiwajo
 hear; ghaina
 heretics; t'iiwajo
@@ -187,7 +193,8 @@ hey; Re
 hi; Re
 him; mu'i
 here; ts'aheya
-human; domo incanon
+human; domo
+hope; ono'jaga
 hurt; kort'ka
 hidden; ch'ani'koeya
 hurts; kort'ka
@@ -222,12 +229,14 @@ leaf; chee'nakhi
 later; yodu'ka
 life; Cheenoh
 listen; ch'an'ek
+lead; ch'imoke
 light; k'iis
 luminary; k'iisho
 like; k’unjo
 long; fen'ch
 loyalty; shaadat'u
 looking; ch'ani'ko
+mad; mos'ga'khi
 make; Rehi
 made; Rehi
 master; guulo
@@ -294,6 +303,7 @@ puzzle; arum
 praise; hira
 pause; hodu
 pollute; gaiduje
+poem; i'afini'khawa
 pillar; ch'anaani
 pious; moq'aaji
 path; Shak'o
@@ -325,6 +335,7 @@ stop; pkhada
 salvation; kiy'ja
 she; juusiit'aji
 signal; shkhoot'u
+should; ju'nikha
 sorry; ch'eka
 scheme; q'ithium
 sacred; Ch'ag
@@ -356,6 +367,7 @@ sleep; pkhungo
 saw; ch'anik'otan
 strong; haala
 stronger; haali
+strength; haaliji
 seen; ch'anik'oji
 soon; yodu
 slower; ooyamaeya
@@ -414,6 +426,7 @@ understand; ch'aamosik'o
 unstable; kraku
 until; ijk
 universe; ngaamakh
+upset; de'mosan
 unknown; ngaamas
 up; he'jitan
 vagina; Jaanay
@@ -459,6 +472,7 @@ you; k'e
 yoke; io
 zealot; moq'aajo
 lost; moduje
+only; rak'ija
 0; kan
 1; rak
 2; din
@@ -498,3 +512,7 @@ now; ikhi'ga
 forever; geeoh
 vigilant; neechuh
 us; riin'khawa
+Foh'nik; General
+Evo'nik; Ultra
+Sef'nik; Major
+Mun'nik; Minor
